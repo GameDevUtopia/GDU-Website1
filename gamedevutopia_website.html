@@ -52,100 +52,157 @@
     <style>
         /* navbar section start */
         #navbar{
-        transition: 2s linear;
-        }
-        #logo{
-            display: block;
-            border-radius: 10%;
-            border:2px solid #FCBE02;
-            transition: 1s;
-        }
+           margin-top:2%;
+         transition: 2s linear;
+       position: fixed;
+        overflow: hidden;
+        background-color: #000000;
+       }
 
-        .container1{
-            padding: 0%;
-        }
 
-        #navContainer{
-            margin-left: 0%;
-            margin-right: 0%;
-            transition: 1s;
-        }
-        #navbar-toggler{
-            width: 80px;
-            height: 60px;
-        }
-        #home{
-            color: white;
-        }
-        #pg{
-        color: white;
-        }
-        #contact{
-        color: white;
-        }
-        #aboutUs{
-        color: white;
-        }
-        nav{
-            background-color: black;
-        }
-        .ms-auto{
-            margin-left: 0%;
-        }
-        .bg-col{
-            background-color: black;
-        }
+       #logo{
+           display: block;
+           border-radius: 10%;
+           border:2px solid #FCBE02;
+           transition: 1s;
+           margin-top: 0.5%;
+       }
+       #logohidden{
+           left:-100px;
+           position: fixed;
+          overflow: hidden;
+           z-index: 99;
+           border-radius: 10%;
+           border:2px solid #FCBE02;
+           transition: 1s linear;
+           margin-top: 0.5%;
+       }
 
-        #title{
-            color:#FCBE02;
-            padding-left: 5%;
-        }
-        .nav-item{
-            padding-right: 25px;
-            padding-left: 25px;
-        }
+   .navbar{
+   position: fixed;
+   z-index: 50;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-between;
+   height: 70px;
+   width: 100%;
+   }
+       #navContainer{
+           margin-left: 0%;
+           margin-right: 0%;
+           max-width: 90%;
+           position: fixed;
 
-        #logoCompressed{
-            border:#FCBE02 1px solid;
-            border-radius: 10%;
-        }
-        #pg:hover{
-                color:#FCBE02 ;
-        }
-        #home:hover{
-             color:#FCBE02 ;
-            }
-         #contact:hover{
-                color:#FCBE02 ;
-                 }
-        #aboutUs:hover{
-          color:#FCBE02 ;
-        }
-        @media only screen and (max-width: 1000px) {
-            #logo {
+           z-index:99;
+           background-color: #000000;
+       }
+       #navbar-toggler{
+           width: 80px;
+           height: 60px;
+       }
+       #home{
+           color: white;
+           font-family: 'Roboto';
+       }
+       #pg{
+       color: white;
+       font-family: 'Roboto';
+       }
+       #contact{
+       color: white;
+       font-family: 'Roboto';
+       }
+       #aboutUs{
+       color: white;
+       font-family: 'Roboto';
+       }
 
-                display: none;
-            }
+       .nav{
 
-            .navbar-brand{
-                display: flex;
-                margin-left:5%;
-            }
+           position: fixed;
+           overflow: hidden;
+           background-color: #000000;
+       }
+       .ms-auto{
+           margin-left: 0%;
+       }
+       .bg-col{
+           background-color: black;
+       }
 
-            #title{
-                padding-top: 8%;
-                padding-left: 2%;
-            }
-            .container1{
-                margin-left: 0%;
-                margin-right: 0%;
-            }
+       #title{
+           color:#FCBE02;
+           padding-left: 5%;
+       }
+       .nav-item{
+           padding-right: 25px;
+           padding-left: 25px;
+           width: fit-content;
+       }
 
-            .nav-item{
-                padding-right: 25px;
-                padding-left: 30px;
-            }
-        }
+       #navmenu{
+         width:100%;
+       }
+       #logoCompressed{
+           border:#FCBE02 1px solid;
+           border-radius: 10%;
+       }
+       #pg:hover{
+               color:#FCBE02 ;
+       }
+       #home:hover{
+            color:#FCBE02 ;
+           }
+        #contact:hover{
+               color:#FCBE02 ;
+                }
+       #aboutUs:hover{
+         color:#FCBE02 ;
+       }
+
+       @media only screen and (max-width: 1000px) {
+           #navContainer{
+               margin-top: 200px;
+               background-color: transparent;
+               max-width: 100%;
+               width: 100%;
+           }
+           #logohidden{
+
+               margin-top: 3%;
+           }
+           #logo {
+
+               display: none;
+           }
+           #nav_bar{
+               background: transparent;
+           }
+           .navbar-brand{
+               display: flex;
+               margin-left:2%;
+           }
+           #navbar-toogler{
+               margin-top: 3%;
+           }
+           .navContainer{
+               margin-top: 3%;
+               margin-left: 0%;
+           }
+           #title{
+               padding-top: 8%;
+               padding-left: 2%;
+               display: none;
+           }
+
+
+
+           .nav-item{
+               padding-right: 25px;
+               padding-left: 30px;
+           }
+       }
         /* navbar section end */
 
         /* contact us section start */
@@ -277,37 +334,38 @@
         /* contact us section end */
     </style>
 </head>
-<body>
+<body onload="firstTrigger()">
     <!-- NavBar Section Start -->
     <section>
-        <nav class="navbar navbar-expand-lg bg-col navbar-dark py-3" id="nav_bar"  style="margin:0%">
-            <div class = "container1" id="navContainer">
-                <img src="logo.png" id ="logo" onclick="logo_click()" height="60px" width="65px" alt="logo"/>
-                <div href = "#" class = "navbar-brand"  >
-                    <div class = "navbar-toggler">
-                    <img src="logo.png" id="logoCompressed"   onclick="logo_click()"  type = "button" data-bs-toggle = "collapse" data-bs-target = "#navmenu"  height="60px" width="65px"/>
-                    </div>
-                    <span id="title" > GameDevUtopia </span>
-                </div>
-                <div class = "collapse navbar-collapse" id = "navmenu">
-                    <ul class = "navbar-nav ms-auto">
-                        <li class = "nav-item">
-                            <a href ="#home_section" class = "nav-link"><u  id="home">Home</u></a>
-                        </li>
-                        <li class = "nav-item">
-                            <a href = "#testimonial" class = "nav-link"><u  id="pg">Project Gallery</u></a>
-                        </li>
-                        <li class = "nav-item">
-                            <a href = "#contact_section" class = "nav-link"><u  id="contact">Contact</u></a>
-                        </li>
-                        <li class = "nav-item">
-                            <a href = "#about_us" class = "nav-link"><u id="aboutUs">About Us</u></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </section>
+          <nav class="navbar navbar-expand-lg bg-col  py-3" id="nav_bar"  style="margin:0%">
+              <div class = "container" id="navContainer">
+                  <img src="logo.png" id ="logo" onclick="logo_click()" height="60px" width="65px" alt="logo"/>
+                  <div href = "#" class = "navbar-brand"  >
+                      <div class = "navbar-toggler">
+                      <img src="logo.png" id="logoCompressed"   onclick="logo_click()"  type = "button" data-bs-toggle = "collapse" data-bs-target = "#navmenu"  height="60px" width="65px"/>
+                      </div>
+                      <span id="title" > GameDevUtopia </span>
+                  </div>
+                  <div class = "collapse navbar-collapse" id = "navmenu">
+                      <ul class = "navbar-nav ms-auto" id="navMenuItem" >
+                          <li class = "nav-item" >
+                              <a href ="#home_section" onclick="logo_click()"  class = "nav-link"><u  id="home">Home</u></a>
+                          </li>
+                          <li class = "nav-item" >
+                              <a href = "#testimonial" onclick="logo_click()"  class = "nav-link"><u  id="pg">Project Gallery</u></a>
+                          </li>
+                          <li class = "nav-item" id="contact_cont">
+                              <a href = "#contact_section" onclick="logo_click()"  class = "nav-link"><u  id="contact">Contact</u></a>
+                          </li>
+                          <li class = "nav-item" id="aboutUs_cont">
+                              <a href = "#about_us" onclick="logo_click()"  class = "nav-link"><u id="aboutUs">About Us</u></a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+      </section>
+      <img src="logo.png" id ="logohidden" onclick="logo_click()" height="60px" width="65px" alt="logo"/>
     <!-- Navbar Section End -->
 
 
@@ -755,31 +813,48 @@
 
     <!-- navbar section start -->
     <script>
-        function logo_click() {
-            var a=document.getElementById("pg")
-            if(a.style.display=="block"){
-                a.style.display="none"
-                document.getElementById("home").style.display="none";
-                document.getElementById("contact").style.display="none";
-                document.getElementById("aboutUs").style.display="none";
-                document.getElementById("title").style.display="none";
-                document.getElementById("nav_bar").style.backgroundColor="white";
-                document.getElementById("logo").style.borderRadius="10%";
-                document.getElementById("logo").style.marginLeft='50%'
+       let start=true;
+     function firstTrigger(){
+       document.getElementById("logoCompressed").click();// to prevent mismatch between hamburger and logo_click()
+       document.getElementById("logoCompressed").click();
+     }
 
-            }else{
-                document.getElementById("nav_bar").style.backgroundColor="black";
-                document.getElementById("title").style.display="block";
-                document.getElementById("home").style.display="block";
+       function logo_click() {
+           var a=document.getElementById("pg")
+           if(start){
+               a.style.display="none"
+               start=false;
+               document.getElementById("title").style.display="none";
+               document.getElementById("navmenu").style.display="none"
+               document.getElementById("navContainer").style.left="-200px";
+               document.getElementById("navContainer").style.backgroundColor="transparent";
+               document.getElementById("nav_bar").style.background="transparent"
+              document.getElementById("navContainer").style.width="80px";
+              document.getElementById("logohidden").style.transition="1s linear"
+
+              document.getElementById("logohidden").style.left="47%";
+
+               document.getElementById("nav_bar").style. justifyContent ="center"
+               document.getElementById("nav_bar").style.top="-100px";
+           }else{
+               start=true;
+              document.getElementById("title").style.display="block";
+               document.getElementById("navmenu").style.display="block"
+               document.getElementById("navContainer").style.backgroundColor="black";
                 a.style.display="block";
-                document.getElementById("contact").style.display="block";
-                document.getElementById("aboutUs").style.display="block";
-                document.getElementById("logo").style.marginLeft='0%'
-            }
-        }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <!-- navbar section end -->
+                document.getElementById("logohidden").style.transition="0s linear"
+                document.getElementById("logohidden").style.left="-100px";
+                document.getElementById("nav_bar").style.top="0px";
+                document.getElementById("navContainer").style.left="0px";
+                document.getElementById("navContainer").style.width="100%";
+                document.getElementById("nav_bar").style. justifyContent="left";
+               document.getElementById("nav_bar").style.background="black"
+
+           }
+       }
+   </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <!-- navbar section end -->
 
 
     <!-- home section start -->
