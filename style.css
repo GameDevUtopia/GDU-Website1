@@ -71,9 +71,9 @@
 	/* margin-top: 50px; */
 	padding-top: 50px;
 }
-/* .carousel-item-1{
+.carousel-item{
 	border:2px #fff;
-} */
+}
 #contentbox{
 	background-color: rgba(238, 238, 238, 0.23);
 	/* padding: 125px; */
@@ -92,7 +92,7 @@
   }
 #maintext{
 	text-align: center;
-	padding-top: 20px;
+	padding-top: 50px;
 	word-wrap: break-word;
 	overflow:hidden;
 }
@@ -106,13 +106,10 @@
 	/* width: 100%; or any custom size */
 	width:200px;
     height: 100%; 
-	padding-bottom: 50px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	
     object-fit: contain;
-	padding-top: 30px;
-	padding-left: 10px;
+	padding-top: 100px;
+	padding-left: 30px;
 }
 @media(max-width:768px){
 	#maintext{
@@ -131,14 +128,6 @@
 	#testimonial .carousel-content {
 		margin-right: 100px;
 	
-	}
-}
-@media(max-width:991px){
-	#id{
-		/* padding-left: 50px; */
-		display: block;
-  		margin-left: auto;
-  		margin-right: auto;
 	}
 }
 
