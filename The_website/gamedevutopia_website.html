@@ -207,20 +207,29 @@
 
         /* contact us section start */
        @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400&display=swap');
-        @media(max-width:767px){
+        @media screen and (max-width: 767px){
             .box{
                 width:50%;
                 margin-left: 20%;
             }
+            section#contact_section{
+                background: linear-gradient(to right,  #010005DE 0%,#010005DE 100%);
+            }
+            textarea{
+                width: 85%;
+            }
         }
-        @media(min-width:768px){
+        @media screen and (min-width:768px){
             .box{
                 width: 70%;
                 margin-left: 10%;
             }
         }
-        @media(width:3600px){
+        /* @media(width:3600px){
 
+        } */
+        #contact_section{
+            background: linear-gradient(to right, #010005DE 0%, #010005DE 79.375%, #FFBF00 79.375%, #FFBF00 100%);
         }
         .input-box{
             border: none;
@@ -679,7 +688,7 @@
 
 
     <!-- Contact Us Section Start-->
-    <section id="contact_section" class = "py-5" style = "background: linear-gradient(to right,  #010005DE 0%,#010005DE 79.375%,#FFBF00 79.375%,#FFBF00 100%);">
+    <section id="contact_section" class = "py-5" style="overflow:hidden">
         <div class = "d-md-flex g-5">
             <div>
                 <div class = "h1 mx-3 text-center" style = "font-family: 'Zilla Slab', serif; color: #FDBE02;font-size: 350%;">Contact Us</div>
